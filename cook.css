@@ -582,7 +582,8 @@ body {
     }
     
     .view-more {
-        flexwrap: wrap
+        display:flex;
+        flexwrap: wrap;
     }
 
     .recipe::after {
