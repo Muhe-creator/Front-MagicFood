@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The title of the webpage -->
+    <title>Bootstrap Carousel</title>
+    <!-- Link to the Bootstrap CSS file from a CDN (Content Delivery Network) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font: Preconnect to Google Fonts servers to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconnect to the Google Fonts static domain for cross-origin requests -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load the "Schoolbell" font from Google Fonts with the "swap" display option -->
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* Use the "Schoolbell" font with a serif fallback */
+            font-family: "Schoolbell", serif;
+            font-weight: 400;
+            font-style: normal;
+            /* Remove default margin to ensure no extra space around the body */
+            margin: 0;
+            /* Hide overflow to prevent scrolling */
+            overflow: hidden;
+        }
+
+        /* Styles for the carousel container */
+        .carousel-container {
+            /* Position the container relative to its normal position */
+            position: relative;
+            /* Set the width to 100% of the viewport width */
+            width: 100vw;
+            /* Set the height to 100% of the viewport height */
+            height: 100vh;
+            /* Use flexbox to align child elements */
+            display: flex;
+            /* Vertically center child elements */
+            align-items: center;
+            /* Align child elements to the right (flex-end) */
+            justify-content: flex-end;
+            /* Set the background color to black */
+            background: #000;
+        }
+
+        /* Styles for the inner carousel container */
+        .carousel-inner {
+            /* Force the width to 100% of the viewport width */
+            width: 100vw !important;
+            /* Force the height to 100% of the viewport height */
+            height: 100vh !important;
+        }
+
+        /* Styles for each carousel item */
+        .carousel-item {
+            /* Force the width to 100% of the viewport width */
+            width: 100vw !important;
+            /* Force the height to 100% of the viewport height */
+            height: 100vh !important;
+        }
+
+        /* Styles for images inside the carousel */
+        .carousel-inner img {
+            /* Set the width to 100% of the parent container */
+            width: 100%;
+            /* Set the height to 100% of the parent container */
+            height: 100%;
+            /* Ensure the image covers the entire container without distortion */
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            /* Add a semi-transparent black background */
+            background: rgba(0, 0, 0, 0.5);
+            /* Add padding inside the caption */
+            padding: 20px 30px;
+            /* Add rounded corners to the caption */
+            border-radius: 5px;
+            /* Use flexbox to align child elements */
+            display: flex;
+            /* Vertically center child elements */
+            align-items: center;
+            /* Align child elements to the right (flex-end) */
+            justify-content: flex-end;
+            /* Align text to the right */
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        /* Media query for screens with a maximum width of 768px (mobile devices) */
+        @media (max-width: 768px) {
+
+            /* Adjust the carousel container height for smaller screens */
+            .carousel-container {
+                height: 100vh;
+            }
+
+            /* Adjust the image height and object-fit for smaller screens */
+            .carousel-inner img {
+                height: 100vh;
+                object-fit: cover;
+            }
+
+            /* Adjust the carousel caption for smaller screens */
+            .carousel-caption {
+                /* Reduce the font size and padding*/
+                font-size: 14px;
+                padding: 5px;
+                /* Center-align the text */
+                text-align: center;
+            }
+
+            /* Adjust h2&p headings for smaller screens,reduce the font size */
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main container for the carousel -->
+    <div class="carousel-container">
+        <!-- Bootstrap carousel component with autoplay and 3-second interval -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <!-- Inner container for carousel items -->
+            <div class="carousel-inner">
+                <!-- First carousel item (active by default) -->
+                <div class="carousel-item active">
+                    <!-- Link to the recipe page with an image -->
+                    <a href="recipecard.html" target="_blank">
+                        <img src="selrecipe1.PNG" class="d-block" alt="Butterbeer">
+                    </a>
+                    <!-- Caption for the carousel item -->
+                    <div class="carousel-caption d-block">
+                        <div>
+                            <h2>Butterbeer</h2>
+                            <p>The Most Popular Drink among wizards in the magical world!<br>
+                                It has the Sweetness of Shortbread and Butter Candies!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second carousel item -->
+                <div class="carousel-item">
+                    <!-- Link to the recipe page with an image -->
+                    <a href="recipe1.html" target="_blank">
+                        <img src="selrecipe2.PNG" class="d-block" alt="Hogwarts Envelope Pie">
+                    </a>
+                    <!-- Caption for the carousel item -->
+                    <div class="carousel-caption d-block">
+                        <div>
+                            <h2>Hogwarts Envelope Pie</h2>
+                            <p>Layers of Crispy Pastry encasing juicy and delicious Meat Filling!<br>
+                                It is the perfect choice for a Tasty Main Course!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third carousel item -->
+                <div class="carousel-item">
+                    <!-- Link to the recipe page with an image -->
+                    <a href="recipe2.html" target="_blank">
+                        <img src="selrecipe3.PNG" class="d-block" alt="Treacle Tart">
+                    </a>
+                    <!-- Caption for the carousel item -->
+                    <div class="carousel-caption d-block">
+                        <div>
+                            <h2>Treacle Tart</h2>
+                            <p>Harry's Favorite! Made from Flaky Pastry and Golden Syrup!<br>
+                                It offers the most Delightful Sweet Treat!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fourth carousel item -->
+                <div class="carousel-item">
+                    <!-- Link to the recipe page with an image -->
+                    <a href="recipe3.html" target="_blank">
+                        <img src="selrecipe4.PNG" class="d-block" alt="Hagrid's Birthday Cake">
+                    </a>
+                    <!-- Caption for the carousel item -->
+                    <div class="carousel-caption d-block">
+                        <div>
+                            <h2>Hagrid's Birthday Cake</h2>
+                            <p>It is filled with Hagrid's Deep Affection!<br>
+                                Although it was a bit squashed, it still tasted as Delisious as ever!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Previous button for the carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- Next button for the carousel -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript bundle for carousel functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
