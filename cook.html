@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Defines the document language as English -->
+
+<head>
+    <!-- Define the character encoding for the document (UTF-8 supports most characters) -->
+    <meta charset="UTF-8">
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage -->
+    <title>Cook By Yourself</title>
+    <!-- Link to the custom CSS file for the styling -->
+    <link rel="stylesheet" href="cook.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <!-- Google Font: Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
+    <!-- Import Font Awesome icon library for using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section: Contains the top navigation elements -->
+    <header class="header">
+        <!-- Hamburger Menu: Toggles the navigation menu on smaller screens -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <!-- Font Awesome bars icon for the hamburger menu -->
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Social Media Icons: Links to social media platforms -->
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-weixin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Logo: Links back to the homepage with the website logo -->
+        <a href="home.html" class="logo">
+            <img src="logo2.png" alt="Logo for MagicFood">
+        </a>
+
+        <!-- Search Bar: Allows users to search the website -->
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <!-- Search button with a magnifying glass icon -->
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Login and Sign Up Buttons: Links to the login and registration pages -->
+        <a href="index.html" class="buttons">
+            <button class="btn">Log In</button>
+            <button class="btn btn-primary">Sign Up</button>
+        </a>
+    </header>
+
+    <!-- Navigation Menu: Contains links to different sections of the website -->
+    <nav class="nav-menu">
+        <!-- Home page link -->
+        <a href="home.html">Home</a>
+        <!-- Cook page link -->
+        <a href="cook.html">Cook</a>
+        <a href="#">Eat Outside</a>
+        <a href="#">Discover</a>
+        <a href="#">Q&A</a>
+        <!-- About Us section link -->
+        <a href="home.html#about">About Us</a>
+        <!-- Contact Us section link -->
+        <a href="home.html#contact">Contact Us</a>
+    </nav>
+
+    <!-- Header Section: Contains a welcome message and an image -->
+    <div class="header1">
+        <!-- Left Text -->
+        <div class="header1-text">
+            <h1>Hey, Welcome! Looks like you decided to cook by yourself today!</h1>
+            <p>
+                Here you can find Recipes for any Magic Food!<br>Good Luck and Enjoy the Food!
+            </p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="header1-image">
+            <img src="shelfbook.png" alt="ShelfBook">
+        </div>
+    </div>
+
+    <!-- Search Section: Allows users to search for recipes -->
+    <div class="search-title">Search Your Magic Recipes Here!</div>
+    <div class="search-bar">
+        <!-- Input Field: Placeholder text prompts the user to search for recipes -->
+        <input type="text" placeholder="Search for Magic Recipes...">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <!-- Card Container: Displays categories of recipes in a grid layout -->
+    <div class="card-container">
+        <!-- Card 1: Represents the "Main Courses" category -->
+        <div class="card">
+            <img src="catemain.png" alt="Main Courses">
+            <div class="category-name">Main Courses</div>
+        </div>
+
+        <!-- Card 2: Represents the "Desserts" category -->
+        <div class="card">
+            <img src="catedessert.png" alt="Desserts">
+            <div class="category-name">Desserts</div>
+        </div>
+
+        <!-- Card 3: Represents the "Snacks" category -->
+        <div class="card">
+            <img src="catesnack.png" alt="Snacks">
+            <div class="category-name">Snacks</div>
+        </div>
+
+        <!-- Card 4: Represents the "Drinks & Soups" category -->
+        <div class="card">
+            <img src="catedrink.png" alt="Drinks & Soups">
+            <div class="category-name">Drinks & Soups</div>
+        </div>
+    </div>
+
+    <!-- Selected Recipes Section: Displays a carousel of selected recipes -->
+    <div class="selected">
+        <h2>Our Selected Recipes</h2>
+        <!-- Responsive Iframe: Embeds a carousel of recipes -->
+        <div class="responsive-iframe">
+            <iframe src="carousel.html"></iframe>
+        </div>
+    </div>
+
+    <!-- Recipe Title Container: Heading and link for more recipes -->
+    <div class="recipe-title-container">
+        <h1 class="recipe-title">More Magic Recipes</h1>
+        <!-- Link: Button to view more recipes -->
+        <a href="#" class="view-more">More <i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- Recipe Shelf Container: Displays a grid of additional recipes -->
+    <div class="recipeshelf-container">
+        <div class="recipeshelf">
+            <!--Each recipe is linked to its own specific recipe interface-->
+            <a href="#" class="recipe" data-title="Platform Meal" describe="This is the delicious dish">
+                <img src="recipe1.png" alt="Recipe 1">
+            </a>
+            <a href="#" class="recipe" data-title="Rock Cake" describe="This is the delicious dish">
+                <img src="recipe2.PNG" alt="Recipe 2">
+            </a>
+            <a href="#" class="recipe" data-title="Great Hall Chicken Pie" describe="This is the delicious dish">
+                <img src="recipe3.jpg" alt="Recipe 3">
+            </a>
+            <a href="#" class="recipe" data-title="Lemon Snowball Pudding" describe="This is the delicious dish">
+                <img src="recipe4.PNG" alt="Recipe 4">
+            </a>
+            <a href="#" class="recipe" data-title="Daily Report Cake" describe="This is the delicious dish">
+                <img src="recipe5.PNG" alt="Recipe 5">
+            </a>
+            <a href="#" class="recipe" data-title="Beef Yorkshire Pudding" describe="This is the delicious dish">
+                <img src="recipe6.PNG" alt="Recipe 6">
+            </a>
+            <a href="#" class="recipe" data-title="Butter Candy Pudding" describe="This is the delicious dish">
+                <img src="recipe7.PNG" alt="Recipe 7">
+            </a>
+            <a href="#" class="recipe" data-title="Sherbet Lemon" describe="This is the delicious dish">
+                <img src="recipe8.PNG" alt="Recipe 8">
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!--Use the semantic tag <footer>, 
+            which is specifically used to define the bottom content of the page. 
+            Improve code readability.-->
+        <div class="footer-container">
+            <!-- Link to the homepage with the website logo -->
+            <a href="home.html" class="footer-logo">
+                <img src="logo2.png" alt="Logo for MagicFood">
+            </a>
+            <!-- Footer Content Section -->
+            <div class="footer-content">
+                <!-- Different Social Media Icons -->
+                <!--Use the ICONS in the Font Awesome icon library.-->
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!--Different Footer Navigation Links -->
+                <nav class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Services</a>
+                    <a href="home.html">Home</a>
+                    <a href="home.html#about">About Us</a>
+                </nav>
+                <!-- Contact Information -->
+                <div class="footer-contact">
+                    Contact us at: <a href="mailto:info@magicfood.com">info@magicfood.com</a>
+                    <!-- Email Contact Link -->
+                </div>
+                <!-- Copyright Information -->
+                <div class="footer-copyright">
+                    &copy; 2025 MagicFood. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js">
+        //Links to JavaScript files in the navigation bar</script>
+</body>
+
+</html>

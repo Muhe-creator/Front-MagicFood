@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Defines the document language as English -->
+
+<head>
+    <!-- Define the character encoding for the document (UTF-8 supports most characters) -->
+    <meta charset="UTF-8">
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage -->
+    <title>Magic Food</title>
+    <!-- Link to the custom CSS file for the styling -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <!-- Google Font: Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Schoolbell&display=swap"
+        rel="stylesheet">
+
+    <!-- Import Font Awesome icon library for using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section: Contains the top navigation elements -->
+    <header class="header">
+        <!-- Hamburger Menu: Toggles the navigation menu on smaller screens -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <!-- Font Awesome bars icon for the hamburger menu -->
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Social Media Icons: Links to social media platforms -->
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-weixin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Logo: Links back to the homepage with the website logo -->
+        <a href="home.html" class="logo">
+            <img src="logo2.png" alt="Logo for MagicFood">
+        </a>
+
+        <!-- Search Bar: Allows users to search the website -->
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <!-- Search button with a magnifying glass icon -->
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Login and Sign Up Buttons: Links to the login and registration pages -->
+        <a href="index.html" class="buttons">
+            <button class="btn">Log In</button>
+            <button class="btn btn-primary">Sign Up</button>
+        </a>
+    </header>
+
+    <!-- Navigation Menu: Contains links to different sections of the website -->
+    <nav class="nav-menu">
+        <!-- Home page link -->
+        <a href="home.html">Home</a>
+        <!-- Cook page link -->
+        <a href="cook.html">Cook</a>
+        <a href="#">Eat Outside</a>
+        <a href="#">Discover</a>
+        <a href="#">Q&A</a>
+        <!-- About Us section link -->
+        <a href="#about">About Us</a>
+        <!-- Contact Us section link -->
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Welcome Section: Displays a welcome message and a call-to-action button -->
+    <section class="welcome">
+        <!-- Overlay: Adds a semi-transparent layer over the background for better text visibility -->
+        <div class="overlay"></div>
+        <!-- Content: Contains the welcome message and description -->
+        <div class="content">
+            <h1 class="title">Welcome to Magic Food!</h1>
+            <p class="description">
+                Welcome to the Wizarding World of Food!
+                <br>Here you can explore thousands of amazing Magic Food...
+            </p>
+            <!-- Button: A call-to-action button to explore more content,
+             For now it's a button to start a piece of music -->
+            <a href="#" id="pre-audio" class="button">EXPLORE MORE</a><!-- More contants are coming soon-->
+            <!-- Audio element to embed the audio file -->
+            <audio id="audio" src="bgmusic.mp3"></audio>
+        </div>
+    </section>
+
+    <!-- Gate Container: A section to choose between two different options (like a gateway) -->
+    <!--At first I set the shape of the door, and later I felt that the scroll was more appropriate, but I was too lazy to change all class name.-->
+    <div class="gateContainer">
+        <div class="gateTitle">---- Choose Your Magic Scroll ! ----</div>
+        <!-- Gate Grid: A grid layout for the two options -->
+        <div class="gateFlex">
+            <!-- Card 1: Option to cook by yourself -->
+            <a href="cook.html" class="gateCard">
+                <div class="gateContent">
+                    <div class="gateText">Cook by yourself<br>and<br>have plenty to Eat!</div>
+                </div>
+            </a>
+            <!-- Card 2: Option to not cook by yourself -->
+            <a href="nocook.html" class="gateCard">
+                <div class="gateContent">
+                    <div class="gateText">Not Cooking<br>by yourself today!</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- News Title: Heading for the news section -->
+    <div class="news-title">Extra! Extra! Hotest Food News in the Wizarding World!</div>
+    <!-- News Section: Displays the latest news about baking in the wizarding world -->
+    <div class="news">
+        <!-- Description: Contains the news headline and details -->
+        <div class="description">
+            <h1>WIZARDS OF BAKING</h1>
+            <h3>CASTING CALL FOR PROFESSIONAL BAKERS!</h3>
+            <p>Looking for highly skilled professional pastry chefs cake artists!<br>
+                If you are looking for a once in a lifetime experience, then this is for you!<br>
+                You must be able to create beautiful sweet showpieces to impress.</p>
+        </div>
+        <!-- Link to the full news article -->
+        <a href="https://www.harrypotter.com/news/sign-up-for-harry-potter-wizards-of-baking-season-two"
+            class="image-container">
+            <!-- Overlay text: A button to view more details -->
+            <div class="overlay-text">View News Details</div>
+        </a>
+    </div>
+
+    <!-- Book Title: Heading for the recipe book section -->
+    <div class="book-title">Welcome to purchase our Paper Magic Recipe Book</div>
+    <!-- Book Section: Displays a collection of recipe books -->
+    <!--Each book can be linked to the corresponding purchase interface-->
+    <div class="book-section">
+        <div class="paperbook">
+            <!-- Book 1: First recipe book -->
+            <div class="book-container">
+                <a href="#" class="book">
+                    <img src="paperrecipe1.jpg" alt="Book 1">
+                    <div class="book-overlay">View More</div>
+                </a>
+                <div class="book-description">
+                    <h3><b>THE OFFICIAL MAGIC COOKBOOK</b></h3>
+                    <p>Classical!<br>More than <b>40</b> recipes of Magic Food!</p>
+                </div>
+            </div>
+            <!-- Book 2: Second recipe book -->
+            <div class="book-container">
+                <div class="book-description">
+                    <h3><b>THE MAGIC BAKING BOOK</b></h3>
+                    <p>Classical!<br><b>45</b> Delicious Magic Baking Recipes!</p>
+                </div>
+                <a href="#" class="book">
+                    <img src="paperrecipe2.jpg" alt="Book 2">
+                    <div class="book-overlay">View More</div>
+                </a>
+            </div>
+            <!-- Book 3: Third recipe book -->
+            <div class="book-container">
+                <a href="#" class="book">
+                    <img src="paperrecipe3.png" alt="Book 3">
+                    <div class="book-overlay">View More</div>
+                </a>
+                <div class="book-description">
+                    <h3><b>MAGIC COOKBOOK FROM NEWYORK</b></h3>
+                    <p>Special!<br>Amazing Recipes from New York!</p>
+                </div>
+            </div>
+            <!-- Book 4: Fourth recipe book -->
+            <div class="book-container">
+                <div class="book-description">
+                    <h3><b>MAGIC COOKBOOK FOR CHRISTMAS</b></h3>
+                    <p>Special!<br>Magic Recipes just for Christmas!</p>
+                </div>
+                <a href="#" class="book">
+                    <img src="paperrecipe4.jpg" alt="Book 4">
+                    <div class="book-overlay">View More</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section: Provides information about the website -->
+    <div id="about" class="about-container">
+        <!-- Logo for the About section -->
+        <div class="about-logo">
+            <img src="logo2.png" alt="MagicFood">
+        </div>
+        <!-- Text content for the About section -->
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>MagicFood is the first comprehensive food website in the magical world.<br>
+                Welcome, All Wizards!<br>
+                Magic Food not only offers thousands of different recipes for you to follow and cook by yourself at any
+                time, but also allows you to check nearby restaurants, freeing your hands to enjoy delicious food.<br>
+                More business sections are under continuous development.<br>
+                If you encounter any problems during use, please feel free to contact us at any time.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!--Use the semantic tag <footer>, 
+            which is specifically used to define the bottom content of the page. 
+            Improve code readability.-->
+        <div class="footer-container">
+            <!-- Link to the homepage with the website logo -->
+            <a href="home.html" class="footer-logo">
+                <img src="logo2.png" alt="Logo for MagicFood">
+            </a>
+            <!-- Footer Content Section -->
+            <div class="footer-content">
+                <!-- Different Social Media Icons -->
+                <!--Use the ICONS in the Font Awesome icon library.-->
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!--Different Footer Navigation Links -->
+                <nav class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Services</a>
+                    <a href="home.html">Home</a>
+                    <a href="home.html#about">About Us</a>
+                </nav>
+                <!-- Contact Information -->
+                <div id="contact" class="footer-contact">
+                    Contact us at: <a href="mailto:info@magicfood.com">info@magicfood.com</a>
+                    <!-- Email Contact Link -->
+                </div>
+                <!-- Copyright Information -->
+                <div class="footer-copyright">
+                    &copy; 2025 MagicFood. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //Generate dynamic star animations
+        // Define the number of stars to generate
+        const numStars = 100; // Number of stars
+
+        // Loop to create each star
+        for (let i = 0; i < numStars; i++) {
+            // Create a new div element for the star
+            const star = document.createElement('div');
+            // Add the 'star' class to the div for styling
+            star.className = 'star';
+
+            // Set a random vertical position for the star (between 0% and 100% of the viewport height)
+            star.style.top = Math.random() * 100 + 'vh'; // Random vertical position
+            // Set a random horizontal position for the star (between 0% and 100% of the viewport width)
+            star.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+
+            // Set a random animation delay for the star (between 0s and 2s)
+            star.style.animationDelay = Math.random() * 2 + 's';
+
+            // Append the star to the body of the document
+            document.body.appendChild(star);
+        }
+
+        // Get the button element by its ID
+        const playButton = document.getElementById('pre-audio');
+
+        // Get the audio element by its ID
+        const audio = document.getElementById('audio');
+
+        // Add a click event listener to the button
+        playButton.addEventListener('click', function () {
+            // Check if the audio is currently paused
+            if (audio.paused) {
+                // If paused, play the audio
+                audio.play();
+                // Change the button text to "Pause Audio"
+                playButton.textContent = 'Pause Audio';
+            } else {
+                // If playing, pause the audio
+                audio.pause();
+                // Change the button text to "Play Audio"
+                playButton.textContent = 'EXPLORE MORE';
+            }
+        });
+    </script>
+    <script src="nav.js">
+        //Links to JavaScript files in the navigation bar</script>
+
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+/* Global body styles */
+body {
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Use Google font */
+    font-family: "Schoolbell", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f4;
+    /* Set the background color */
+    display: flex;
+    /* Use flexbox for layout */
+    /* Center content horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Set the height to 100% of the viewport height */
+}
+
+/* Login container styles */
+.login-container {
+    width: 800px;
+    height: 680px;
+    position: relative;
+    /* Set position to relative for child elements */
+    perspective: 1000px;
+    /* Add perspective for 3D effect(flip) */
+}
+
+/* Flip card styles */
+.flip-card {
+    /* Set height and width to 100% of the parent */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* Position absolutely within the container */
+    transform-style: preserve-3d;
+    /* Preserve 3D transformations */
+    transition: transform 0.6s;
+    /* Add transition for smooth flipping */
+}
+
+/* Flipped card styles */
+.flip-card.flipped {
+    transform: rotateY(180deg);
+    /* Rotate the card 180 degrees on the Y-axis */
+}
+
+/* Front and back card styles */
+.flip-card .front,
+.flip-card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* Position absolutely within the card */
+    backface-visibility: hidden;
+    /* Hide the backface of the card */
+    display: flex;
+    /* Use flexbox for layout */
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a shadow effect */
+    border-radius: 8px;
+    /* Add rounded corners */
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+/* Back card styles */
+.flip-card .back {
+    transform: rotateY(180deg);
+    /* Rotate the back card 180 degrees */
+}
+
+/* Left section styles(Image) */
+.left-section {
+    flex: 1;
+    /* Take up remaining space */
+    background: url('log.jpg') no-repeat center center/cover;
+    /* Set a background image */
+}
+
+/* Right section styles(Form) */
+.right-section {
+    flex: 1;
+    /* Take up remaining space */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+}
+
+/* Logo styles */
+.logo {
+    text-align: center;
+    /* Center the logo */
+    margin-bottom: 0;
+    /* Remove bottom margin */
+    margin-top: 20px;
+    /* Add top margin */
+    animation: floatAnimation3 2s infinite ease-in-out alternate;
+    /* Add a floating animation */
+}
+
+/* Logo image styles */
+.logo img {
+    width: 150px;
+    /* Set the width of the logo */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Floating animation keyframes */
+@keyframes floatAnimation3 {
+    0% {
+        transform: translateY(-5px);
+        /* Move the logo up */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Move the logo back to its original position */
+    }
+}
+
+/* Right section heading styles */
+.right-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    /* Center the text */
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px;
+    /* Add bottom margin */
+}
+
+/* Form label styles */
+.form-group label {
+    display: block;
+    /* Make the label a block element */
+    margin-bottom: 5px;
+    /* Add bottom margin */
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form input styles */
+.form-group input {
+    width: 100%;
+    /* Set the width to 100% */
+    padding: 10px;
+    border: 1px solid #ddd;
+    /* Add a border */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Forgot password link styles */
+.forgot-password {
+    text-align: left;
+    /* Align text to the left */
+    margin-bottom: 15px;
+}
+
+.forgot-password a {
+    color: #c62602;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+/* Terms and conditions styles */
+.terms {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+    /* Add right margin */
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #391007;
+    color: #fff;
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    /* Change cursor to pointer */
+    margin-bottom: 20px;
+    /* Add bottom margin */
+    font-family: "Schoolbell", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button:hover {
+    background-color: #6a2b01;
+    /* Change background color on hover */
+}
+
+/* Other login/signup options styles */
+.other-login,
+.other-signup {
+    text-align: center;
+    /* Center the text */
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    /* Add bottom margin */
+}
+
+/* Social icons styles */
+.social-icons {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: center;
+    /* Center icons horizontally */
+    gap: 10px;
+    /* Add space between icons */
+    margin-bottom: 10px;
+    /* Add bottom margin */
+}
+
+.social-icons img {
+    /* Set the width and height of the icons */
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+/* Guest login link styles */
+.guest-login {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+    /* Remove top margin */
+}
+
+.guest-login a {
+    color: #c62602;
+    /* Set the link color */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 16px;
+}
+
+.guest-login a:hover {
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+/* No account or Already have account styles */
+.no-account,
+.already-have-account {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    /* Add bottom margin */
+}
+
+/* Sign up and Log in link styles */
+.sign-up,
+.log-in {
+    text-align: center;
+    /* Center the text */
+}
+
+.sign-up a,
+.log-in a {
+    color: #007bff;
+    /* Set the link color */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sign-up a:hover,
+.log-in a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .login-container {
+        /* Set width and height to 100% */
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+        /* Remove shadow */
+    }
+
+    .flip-card .front,
+    .flip-card .back {
+        flex-direction: column;
+        /* Stack children vertically */
+        background: url('log.jpg') no-repeat center center/cover;
+        /* Set background image */
+        justify-content: center;
+        /* Center content vertically */
+        align-items: center;
+        /* Center content horizontally */
+    }
+
+    /* Reset the height, 
+    ensure that the elements are contained within the white background box */
+    .flip-card .front {
+        height: 750px;
+    }
+
+    .flip-card .back {
+        height: 800px;
+    }
+
+    .left-section {
+        display: none;
+        /* Hide the left section */
+    }
+
+    .right-section {
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding: 0;
+        margin: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Add shadow */
+        max-width: 80%;
+        /* Set maximum width */
+        width: 80%;
+        max-height: 75%;
+        /* Set maximum height */
+    }
+
+    .logo img {
+        width: 120px;
+        /* Reduce logo size */
+        margin-bottom: 0;
+        /* Remove bottom margin */
+    }
+
+    .right-section h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .other-login,
+    .other-signup {
+        font-size: 14px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        /* Reduce icon size */
+        height: 20px;
+    }
+
+    .guest-login a {
+        font-size: 14px;
+    }
+
+    .no-account,
+    .already-have-account {
+        font-size: 14px;
+    }
+
+    .sign-up a,
+    .log-in a {
+        font-size: 14px;
+        /* Reduce font size */
+    }
+}
+
+@media (max-width: 450px) {
+    .right-section {
+        text-align: center;
+    }
+
+    .form-group label {
+        text-align: start;
+        padding-left: 10px;
+    }
+
+    .form-group input {
+        width: 90%;
+    }
+
+    .forgot-password {
+        margin-left: 10px;
+    }
+
+    .terms {
+        font-size: 0.8rem;
+    }
+
+    button {
+        width: 80%;
+        border-radius: 20px;
+    }
+}

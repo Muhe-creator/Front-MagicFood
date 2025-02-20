@@ -1,0 +1,576 @@
+/* Apply border-box sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/*The box will not exceed the set width and height, and will not affect the layout.
+Easier to manage responsive design.*/
+
+/* Style the body element */
+body {
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Use Google Font*/
+    font-family: "Schoolbell", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    /* Center-align text */
+    background-image: url('bgpaper.jpg');
+    /* Set the background image */
+    background-size: contain;
+    /* Scale the background image to fit within the container */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: repeat;
+    /* Repeat the background image */
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling */
+}
+
+/* Style the header1 class */
+.header1 {
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center-align items vertically */
+    width: 100%;
+    justify-content: center;
+    /* Center-align items horizontally */
+    padding: 40px 20px;
+    /* Add more padding */
+    color: rgb(84, 34, 1);
+}
+
+/* Style the header1-text class */
+.header1-text {
+    flex: 1;
+    /* Allow the text to grow and take up available space */
+    max-width: 600px;
+    /* Set a maximum width */
+    text-align: center;
+    /* Center-align text */
+}
+
+/* Style the h1 element inside header1-text */
+.header1-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Style the p element inside header1-text */
+.header1-text p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: rgb(84, 34, 1);
+}
+
+/* Style the image inside header1-image */
+.header1-image img {
+    flex: 0 0 auto;
+    /* Prevent the image from growing or shrinking */
+    max-height: 300px;
+    /* Set a maximum height */
+    border-radius: 10px;
+    /* Add rounded corners */
+}
+
+
+/* Style the search-bar class */
+.search-bar {
+    max-width: 600px;
+    /* Set a maximum width */
+    margin: 0 auto 40px;
+    /* Center-align and add margin at the bottom */
+    position: relative;
+    /* Set position to relative */
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: center;
+    /* Center-align items horizontally */
+}
+
+/* Style the search-title class */
+.search-title {
+    text-align: center;
+    /* Center-align text */
+    font-size: 2.5rem;
+    font-weight: bold;
+    /* Add margin at the top and bottom */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: rgb(84, 34, 1);
+}
+
+
+/* Style the input inside search-bar */
+.search-bar input {
+    width: 100%;
+    padding: 12px 50px 12px 20px;
+    /* Add padding */
+    font-size: 1rem;
+    /* Setting font sizes in relative units helps with responsive layout */
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    /* Remove outline */
+    transition: border-color 0.3s ease;
+    /* Add transition effect */
+}
+
+/* Change border color on input focus */
+.search-bar input:focus {
+    border-color: #f85d03;
+}
+
+/* Style the search icon inside search-bar */
+.search-bar .search-icon {
+    position: absolute;
+    /* Set position to absolute */
+    right: 20px;
+    /* Position from the right */
+    top: 50%;
+    /* Position from the top */
+    transform: translateY(-50%);
+    /* Center vertically */
+    color: #888;
+    cursor: pointer;
+    /* Change cursor to pointer */
+    font-size: 1.2rem;
+    /* Set icon size */
+    transition: color 0.3s ease;
+    /* Add transition effect */
+}
+
+/* Change search icon color on hover */
+.search-bar .search-icon:hover {
+    color: #f85d03;
+}
+
+/* Style the card-container class */
+.card-container {
+    display: grid;
+    /* Use Grid layout */
+    grid-template-columns: repeat(auto-fit, 250px);
+    /* Fixed card width of 250px */
+    gap: 20px;
+    /* Spacing between cards */
+    justify-content: center;
+    /* Center alignment */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style the card class */
+.card {
+    width: 250px;
+    /* Fixed width for cards */
+    background-color: rgb(247, 194, 134);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect to card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the image inside card */
+.card img {
+    width: 100%;
+    /* Make image fill the card width */
+    height: 180px;
+    /* Fixed height for images */
+    padding-top: 10px;
+    object-fit: contain;
+    /* Ensure the image is not cropped and maintains aspect ratio */
+}
+
+/* Style the category-name class inside card */
+.card .category-name {
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(84, 34, 1);
+}
+
+.selected h2 {
+    color: rgb(84, 34, 1);
+    font-size: 2.5rem;
+}
+
+/* Style the responsive-iframe class */
+.responsive-iframe {
+    position: relative;
+    /* Set position to relative */
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+/* Style the iframe inside responsive-iframe */
+.responsive-iframe iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* Remove border */
+    display: block;
+    /* Display as block element */
+}
+
+/* Style the recipe-title-container class */
+.recipe-title-container {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style the recipe-title class */
+.recipe-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(84, 34, 1);
+    display: inline-block;
+    /* Display as inline-block */
+    margin: 0;
+    /* Remove margin */
+}
+
+/* Style the view-more class */
+.view-more {
+    position: absolute;
+    /* Set position to absolute */
+    right: 10px;
+    /* Position from the right */
+    top: 50%;
+    /* Position from the top */
+    transform: translateY(-50%);
+    /* Center vertically */
+    text-decoration: none;
+    /* Remove text decoration */
+    color: rgb(84, 34, 1);
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center-align items vertically */
+    font-size: 1.8rem;
+}
+
+/* Style the icon inside view-more */
+.view-more i {
+    margin-left: 5px;
+    /* Add margin to the left */
+    font-size: 1.8rem;
+}
+
+/* Change view-more color on hover */
+.view-more:hover {
+    color: #f85d03;
+}
+
+/* Style the recipeshelf-container class */
+.recipeshelf-container {
+    display: flex;
+    /* Use flexbox for layout */
+    /* Center-align items vertically and horizontally */
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Style the recipeshelf class */
+.recipeshelf {
+    display: grid;
+    /* Use grid for layout */
+    grid-template-columns: repeat(4, 1fr);
+    /* Create 4 equal columns */
+    gap: 10px;
+    /* Add gap between grid items */
+    width: 80%;
+}
+
+/* Style the recipe class */
+.recipe {
+    position: relative;
+    display: flex;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    /* Set aspect ratio */
+    background: url('bgshelf.png') center/cover no-repeat;
+    border-radius: 12px;
+    overflow: visible;
+    /* Allow overflow content to be visible */
+    animation: float 3s ease-in-out infinite;
+    /* Add floating animation */
+}
+
+/* Remove animation and add hover effect to recipe */
+.recipe:hover {
+    animation: none;
+    /* Remove animation */
+    transform: scale(1.05) translateY(-10px);
+    /* Scale and move up */
+    transition: transform 0.3s ease;
+    /* Add transition effect */
+}
+
+/* Style the pseudo-elements before and after recipe */
+.recipe::before,
+.recipe::after {
+    position: absolute;
+    /* Set position to absolute */
+    left: 50%;
+    /* Position from the left */
+    transform: translateX(-50%);
+    /* Center horizontally */
+    color: rgb(88, 24, 1);
+    text-align: center;
+    padding: 8px 14px;
+    border-radius: 6px;
+    width: 90%;
+}
+
+/* Style the Text before recipe image */
+.recipe::before {
+    content: attr(data-title);
+    /* Set content to data-title attribute */
+    top: 15%;
+    /* Position from the top */
+    font-size: 25px;
+}
+
+/* Style the Text after recipe image*/
+.recipe::after {
+    content: attr(describe);
+    /* Set content to describe attribute */
+    bottom: 15%;
+    /* Position from the bottom */
+    font-size: 20px;
+}
+
+/* Style the image inside recipe */
+.recipe img {
+    position: absolute;
+    /* Set position to absolute */
+    top: 27%;
+    /* Position from the top */
+    left: 50%;
+    /* Position from the left */
+    transform: translateX(-50%);
+    width: 88%;
+    height: 42%;
+}
+
+/* Define the float animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Start and end at original position */
+    }
+
+    50% {
+        transform: translateY(-3px);
+        /* Move up */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1300px) {
+    .header1-text {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* Adjust search-bar width for screens up to 1024px */
+    .search-bar {
+        max-width: 80%;
+    }
+
+    /* Adjust recipeshelf grid columns for screens up to 1024px */
+    .recipeshelf {
+        grid-template-columns: repeat(2, 1fr);
+        /* Create 2 equal columns */
+    }
+
+}
+
+/* For tablets: 2x2 grid */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card-container {
+        grid-template-columns: repeat(2, 250px);
+        /* 2 columns with fixed width */
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .header1 {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center-align items horizontally */
+        gap: 20px;
+        /* Add gap between items */
+    }
+
+    .header1-text {
+        margin-bottom: 20px;
+        /* Add margin at the bottom */
+        margin-left: 0;
+    }
+
+    .header1-image img {
+        max-height: 200px;
+        /* Reduce maximum height */
+    }
+
+    /* Adjust search icon size and position for screens up to 768px */
+    .search-bar .search-icon {
+        font-size: 1rem;
+        /* Reduce icon size */
+        right: 15px;
+        /* Adjust position from the right */
+    }
+
+    /* Adjust input padding and font size for screens up to 768px */
+    .search-bar input {
+        padding: 10px 45px 10px 15px;
+        /* Reduce padding */
+        font-size: 0.9rem;
+        /* Reduce font size */
+    }
+
+    /* For desktop: 4 cards in a row */
+    .card-container {
+        grid-template-columns: repeat(4, 250px);
+        /* 4 columns with fixed width */
+    }
+
+    /* Adjust selected h2 font size and iframe height for screens up to 768px */
+    .selected h2 {
+        font-size: 1.8rem;
+        /* Reduce font size */
+        font-weight: bolder;
+        margin-top: 40px;
+    }
+
+    .responsive-iframe {
+        height: 60vh;
+        /* Reduce height */
+    }
+
+    /* Adjust recipe-title and view-more font size for screens up to 768px */
+    .recipe-title {
+        font-size: 1.7rem;
+        font-weight: bolder;
+    }
+
+    .view-more {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust recipeshelf grid columns and recipe styles for screens up to 768px */
+    .recipeshelf {
+        grid-template-columns: repeat(1, 1fr);
+        /* Create 1 column */
+        max-width: 90%;
+        /* Set maximum width */
+        margin: 0 auto;
+        /* Center-align the container */
+        gap: 0;
+        /* Remove gap */
+    }
+
+    .recipe {
+        animation: none;
+        /* Remove animation */
+    }
+
+    .recipe::before {
+        font-size: 1.5rem;
+        /* Increase font size */
+        font-weight: bolder;
+    }
+
+    .recipe::after {
+        font-size: 1.5rem;
+    }
+}
+
+/* For mobile: 1 column */
+@media (max-width: 767px) {
+    .card-container {
+        grid-template-columns: 250px;
+        /* 1 column with fixed width */
+    }
+
+    .card .category-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+/* Adjust search-bar width for screens up to 600px */
+@media (max-width: 600px) {
+    .search-title {
+        font-size: 1.8rem;
+    }
+
+    .search-bar {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .header1 {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center-align items horizontally */
+        gap: 3px;
+        /* Add gap between items */
+    }
+
+    .header1-text {
+        margin-bottom: 0;
+    }
+
+    .header1-text h1 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .header1-text p {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .header1-image img {
+        max-height: 200px;
+        /* Reduce maximum height */
+    }
+
+    /* Adjust search-title font size for screens up to 768px */
+    .search-title {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .view-more i {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+}

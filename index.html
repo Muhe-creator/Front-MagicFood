@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<html lang="en">
+<!-- Defines the document language as English -->
+
+<head>
+    <!-- Contains metadata and links to external resources -->
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive and scales properly on mobile devices -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Link to CSS file -->
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Links to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <!-- Sets the title of the page -->
+    <title>Login & Sign Up</title>
+
+</head>
+
+<body>
+    <!-- Main container for the login/signup form -->
+    <div class="login-container">
+        <!-- Flip card container for the login and signup forms -->
+        <div class="flip-card" id="flipCard">
+            <!-- Front side of the card (Login Form) -->
+            <div class="front">
+                <!-- Left section with a background image -->
+                <div class="left-section"></div>
+                <!-- Right section with the login form -->
+                <div class="right-section">
+                    <!-- Logo section -->
+                    <div class="logo">
+                        <img src="logo2.png" alt="Logo">
+                    </div>
+                    <!-- Welcome heading -->
+                    <h2>Welcome !</h2>
+                    <!-- Login form -->
+                    <form action="#" method="post">
+                        <!-- Email input field -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <!-- Password input field -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <!-- Forgot password link -->
+                        <div class="forgot-password">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <!-- Terms and conditions checkbox -->
+                        <div class="terms">
+                            <label>
+                                <input type="checkbox" name="agree" required>
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                            </label>
+                        </div>
+                        <!-- Login button -->
+                        <button type="submit">Login</button>
+                    </form>
+                    <!-- Social login options -->
+                    <div class="other-login">
+                        Or login with
+                    </div>
+                    <!-- Social media icons -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                    </div>
+                    <!-- Guest login link -->
+                    <div class="guest-login">
+                        <a href="home.html">Continue as Guest</a>
+                    </div>
+                    <!-- Link to switch to the signup form -->
+                    <div class="no-account">
+                        Don't have an account? <a href="#" onclick="flipCard()">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back side of the card (Signup Form) -->
+            <div class="back">
+                <!-- Left section with a background image -->
+                <div class="left-section"></div>
+                <!-- Right section with the signup form -->
+                <div class="right-section">
+                    <!-- Logo section -->
+                    <div class="logo">
+                        <img src="logo2.png" alt="Logo">
+                    </div>
+                    <!-- Create Account heading -->
+                    <h2>Create Account</h2>
+                    <!-- Signup form -->
+                    <form action="#" method="post">
+                        <!-- Email input field -->
+                        <div class="form-group">
+                            <label for="signup-email">Email Address</label>
+                            <input type="email" id="signup-email" name="email" required>
+                        </div>
+                        <!-- Password input field -->
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" required>
+                        </div>
+                        <!-- Confirm password input field -->
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                        </div>
+                        <!-- Terms and conditions checkbox -->
+                        <div class="terms">
+                            <label>
+                                <input type="checkbox" name="agree" required>
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                            </label>
+                        </div>
+                        <!-- Signup button -->
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <!-- Social signup options -->
+                    <div class="other-signup">
+                        Or sign up with
+                    </div>
+                    <!-- Social media icons -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                    </div>
+                    <!-- Guest login link -->
+                    <div class="guest-login">
+                        <a href="home.html">Continue as Guest</a>
+                    </div>
+                    <!-- Link to switch to the login form -->
+                    <div class="already-have-account">
+                        Already have an account? <a href="#" onclick="flipCard()">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for flipping the card -->
+    <script>
+        // Function to flip the card between login and signup forms
+        function flipCard() {
+            // Get the flip card element by its ID
+            const flipCard = document.getElementById('flipCard');
+            // Toggle the 'flipped' class to rotate the card
+            flipCard.classList.toggle('flipped');
+        }
+    </script>
+</body>
+
+</html>
