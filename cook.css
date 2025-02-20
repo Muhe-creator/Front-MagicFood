@@ -574,3 +574,18 @@ body {
         margin-left: 0;
     }
 }
+
+@media (max-width: 395px) {
+    .search-title {
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+    
+    .view-more {
+        flexwrap: wrap
+    }
+
+    .recipe::after {
+    font-size: 15px;
+}
+}
