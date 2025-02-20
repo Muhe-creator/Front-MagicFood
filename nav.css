@@ -1,0 +1,445 @@
+/* Header Section */
+.header {
+    display: flex;
+    /* Use flexbox layout */
+    justify-content: space-between;
+    /* Align items to both ends */
+    align-items: center;
+    /* Center items vertically */
+    padding: 30px 20px;
+    /* Add padding: 30px top & bottom, 20px left & right */
+    background-color: #391007;
+    /* Set background color */
+    border-bottom: 1px solid #fab78ea5;
+    /* Add bottom border with specific color */
+    position: relative;
+    /* Position relative to normal layout */
+    width: 100%;
+    /* Full width */
+    box-sizing: border-box;
+    /* Include padding and border in total width and height */
+    margin: 0;
+    /* Remove extra margins */
+}
+
+/* Social Media Section (Left Side) */
+.social-media {
+    display: flex;
+    /* Use flexbox layout */
+    gap: 10px;
+    /* Space between social media icons */
+}
+
+.social-media a {
+    color: #fff;
+    /* Set text color to white */
+    font-size: 1.2rem;
+    /* Set font size */
+    transition: color 0.3s ease;
+    /* Smooth color transition effect */
+}
+
+.social-media a:hover {
+    color: #f57539;
+    /* Change text color on hover */
+}
+
+/* Logo Section */
+.logo {
+    position: absolute;
+    /* Absolute positioning relative to parent */
+    left: 50%;
+    /* Move to center horizontally */
+    transform: translateX(-50%);
+    /* Adjust exact centering */
+}
+
+.logo img {
+    height: 50px;
+    /* Set logo height */
+    transition: transform 0.3s ease;
+    /* Smooth scaling effect */
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge logo on hover */
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    /* Use flexbox layout */
+    align-items: center;
+    /* Align elements vertically */
+    gap: 10px;
+    /* Space between elements */
+    margin-left: auto;
+    /* Push search bar to the right */
+    margin-right: 20px;
+    /* Add margin to right side */
+}
+
+.search input {
+    border: 1px solid #ccc;
+    /* Light gray border */
+    border-radius: 20px;
+    /* Round border corners */
+    padding: 5px 15px;
+    /* Inner spacing for better readability */
+    background-color: #222;
+    /* Dark background */
+    color: #fff;
+    /* White text color */
+    outline: none;
+    /* Remove default outline */
+    transition: width 0.3s ease;
+    /* Smooth width expansion */
+}
+
+.search.active input {
+    border-radius: 20px;
+    /* Maintain rounded borders when active */
+}
+
+.search button {
+    background-color: #444;
+    /* Set button background */
+    border: none;
+    /* Remove border */
+    border-radius: 50%;
+    /* Circular shape */
+    padding: 8px;
+    /* Adjust button padding */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    color: #fff;
+    /* White button text color */
+    transition: background-color 0.3s ease;
+    /* Smooth hover transition */
+}
+
+.search button:hover {
+    background-color: #f57539;
+    /* Change button color on hover */
+}
+
+/* Login and Register Buttons (Right Side) */
+.buttons {
+    display: flex;
+    /* Use flexbox layout */
+    align-items: center;
+    /* Align items vertically */
+    gap: 10px;
+    /* Space between buttons */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.buttons .btn {
+    padding: 5px 15px;
+    /* Adjust button padding */
+    border: 2px solid #fff;
+    /* White border */
+    border-radius: 20px;
+    /* Rounded corners */
+    background-color: transparent;
+    /* Transparent background */
+    color: #fff;
+    /* White text color */
+    font-size: 14px;
+    /* Set font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transitions */
+}
+
+.buttons .btn:hover {
+    background-color: #fff;
+    /* Change background to white on hover */
+    color: #0b0b33;
+    /* Change text color */
+}
+
+.buttons .btn-primary {
+    background-color: #fa8d49fe;
+    /* Primary button background color */
+    color: #fff;
+    /* White text color */
+    border: 2px solid #fa8d49fe;
+    /* Border matches background */
+}
+
+.buttons .btn-primary:hover {
+    background-color: #fff;
+    /* Change background to white on hover */
+    color: #fa8d49fe;
+    /* Change text color */
+}
+
+/* Navigation Bar */
+.nav-menu {
+    display: flex;
+    /* Use flexbox layout */
+    justify-content: center;
+    /* Center navigation items */
+    gap: 20px;
+    /* Space between navigation items */
+    padding: 10px;
+    /* Add padding inside navigation */
+    background-color: #391007;
+    /* Set background color */
+    border-bottom: 1px solid #fab78ea5;
+    /* Add bottom border */
+}
+
+.nav-menu a {
+    color: #fff;
+    /* Set text color to white */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 20px;
+    /* Set font size */
+    font-weight: bold;
+    /* Make text bold */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+/* Set a hover effect on menu elements */
+.nav-menu a:hover {
+    color: #f57539;
+    /* Change text color on hover */
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+/* Hamburger Menu (For Mobile Navigation) */
+.hamburger-menu {
+    display: none;
+    /* Hide by default */
+    font-size: 1.2rem;
+    /* Set font size */
+    color: #fa8d49fe;
+    /* Set text color to white */
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+
+/* Responsive Design for Navigation */
+@media (max-width: 1024px) {
+
+    /* Hide Search Bar Input and Only Show Icon */
+    .search input {
+        width: 0;
+        /* Set width to zero */
+        padding: 0;
+        /* Remove padding */
+        border: none;
+        /* Remove border */
+        opacity: 0;
+        /* Hide input field */
+        transition: width 0.3s ease, opacity 0.3s ease;
+        /* Smooth transition effect */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        /* Hide navigation menu on smaller screens */
+        position: absolute;
+        /* Make the menu float above content */
+        flex-direction: column;
+        /* Stack items vertically */
+        top: 100px;
+        /* Position below header */
+        left: 0;
+        /* Align to the left */
+        width: 100%;
+        /* Full width */
+        background-color: #391007;
+        /* Set background color */
+        padding: 20px 0;
+        /* Add some padding */
+        /* Add padding */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Add shadow effect */
+        align-items: center;
+        /* Center items */
+        text-align: center;
+        /* Center text */
+        z-index: 1000;
+        /* Ensure it appears above other content */
+        gap: 10px;
+        /* Spacing between links in vertical layout */
+
+    }
+
+    /* Show nav links when menu is active */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .social-media {
+        display: none;
+        /* Hide social media icons on smaller screens */
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Show hamburger menu */
+
+    }
+
+    /* Adjust Logo and Buttons Position */
+    .logo {
+        position: static;
+        /* Remove absolute positioning */
+        transform: none;
+        /* Remove transformation effect */
+        margin: 0 auto;
+        /* Center the logo */
+    }
+
+    .buttons {
+        margin-left: auto;
+        /* Push buttons to the right */
+    }
+
+    .search.active input {
+        width: 150px;
+        /* Set input width when active */
+        padding: 5px 15px;
+        /* Adjust padding inside input */
+        border: 1px solid #ccc;
+        /* Set border color */
+        opacity: 1;
+        /* Make input field visible */
+    }
+}
+
+@media (max-width: 450px) {
+    .logo img {
+        max-width: 100px;
+        max-height: 35px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .buttons .btn,
+    .buttons .btn-primary {
+        font-size: 0.8rem;
+    }
+
+    .social-media {
+        display: none;
+    }
+
+}
+
+/* Footer Section */
+.footer {
+    background-color: #391007;
+    /* Set footer background */
+    color: white;
+    /* Set text color */
+    padding: 20px 0;
+    /* Add vertical padding */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Set font style */
+}
+
+.footer-container {
+    display: flex;
+    /* Use flexbox layout */
+    justify-content: space-between;
+    /* Space content evenly */
+    align-items: center;
+    /* Align items vertically */
+    max-width: 1200px;
+    /* Set max width */
+    margin: 0 auto;
+    /* Center container */
+    padding: 0 15px;
+    /* Adjust padding */
+    font-size: 1.3rem;
+    /* Set font size */
+}
+
+
+.footer-logo img {
+    height: 70px
+}
+
+.footer-content {
+    text-align: right;
+    /* Align text to the right */
+}
+
+
+.footer-contact a {
+    color: #fdc0a4;
+    /* Set link color */
+    text-decoration: none;
+    /* Remove underline */
+    margin-right: 15px;
+    /* Space between links */
+}
+
+.footer-social,
+.footer-links,
+.footer-contact,
+.footer-copyright {
+    margin-bottom: 10px;
+    /*Spacing between lines is 10px*/
+}
+
+.footer-links a,
+.footer-social a {
+    color: white;
+    /* Set text color */
+    text-decoration: none;
+    /* Remove underline */
+    margin-right: 15px;
+    /* Space between links */
+}
+
+.footer-links a:hover {
+    color: #f57539 !important;
+}
+
+/* Responsive Footer Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center align text */
+    }
+
+    .footer-logo {
+        margin-bottom: 15px;
+    }
+
+    .footer-logo img {
+        height: 50px;
+        /* Reduce logo size */
+    }
+
+    .footer-content {
+        text-align: center;
+        /* Center align text */
+    }
+
+    .footer-social a,
+    .footer-links a,
+    .footer-contact a {
+        margin: 5px;
+        /* Add spacing around links */
+        display: inline-block;
+        /* Ensure links are displayed inline but behave like block elements */
+    }
+}
