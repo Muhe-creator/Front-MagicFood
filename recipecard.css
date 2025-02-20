@@ -1,0 +1,938 @@
+/* Style the body element */
+body {
+    /* Use Google Font */
+    font-family: "Schoolbell", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+    background-image: url('bgpaper.jpg');
+    background-size: contain;
+    /* Scale the background image to fit within the container */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: repeat;
+    /* Prevent the image from repeating */
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling */
+}
+
+/* Center Section */
+.center {
+    width: 100%;
+    height: auto;
+    /* Allow height to adjust automatically */
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center-align items vertically */
+    justify-content: center;
+    /* Center-align items horizontally */
+    flex-direction: column;
+    /* Stack items vertically */
+    text-align: center;
+    /* Center-align text */
+    position: relative;
+    /* Set position to relative */
+}
+
+/* Style the top-banner class */
+.top-banner {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    /* Add margin at the top */
+    position: relative;
+}
+
+/* Style the image inside top-banner */
+.top-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Display as a block element */
+}
+
+/* Style the bottom-text class */
+.bottom-text {
+    font-size: 2.8rem;
+    color: rgb(243, 154, 77);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Set semi-transparent background color */
+    width: 40%;
+    padding: 10px 20px;
+    position: absolute;
+    /* Set position to absolute */
+    bottom: 0px;
+    /* Position from the bottom */
+    left: 50%;
+    /* Position from the left */
+    transform: translateX(-50%);
+    /* Center horizontally */
+    text-align: center;
+    /* Center-align text */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    border-radius: 5px;
+}
+
+/* Responsive layout: Adjust font-size and padding for screens up to 1380px and 1000px */
+@media (max-width: 1380px) {
+    .bottom-text {
+        font-size: 2rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .bottom-text {
+        font-size: 1.5rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Responsive layout: Adjust for screens up to 750px */
+@media (max-width: 750px) {
+    .bottom-text {
+        font-size: 1rem;
+        padding: 4px 8px;
+        bottom: -10px;
+        /* Adjust position from the bottom */
+    }
+}
+
+@media (max-width: 450px) {
+    .center {
+        margin-bottom: -90px;
+    }
+
+    .bottom-text {
+        font-size: 1rem;
+        padding: 0;
+        bottom: 20px;
+        /* Adjust position from the bottom */
+        position: relative;
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    .text h1 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .text p {
+        font-size: 1.2rem;
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+
+/* Style the fixed navigation bar */
+.navbar {
+    width: 100%;
+    background: rgba(236, 145, 9, 0);
+    /* Set transparent background */
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    /* Add smooth transition */
+    position: relative;
+    z-index: 999;
+    /* Set a high z-index to ensure it stays on top */
+    white-space: wrap;
+    /* Prevent text from wrapping */
+}
+
+/* Style the links inside the navbar */
+.navbar a {
+    color: rgb(30, 25, 21);
+    text-decoration: none;
+    /* Remove underline */
+    padding: 10px 20px;
+    display: inline-block;
+    /* Display as inline-block */
+    font-size: 35px;
+    transition: background 0.3s;
+    /* Add smooth background transition */
+}
+
+/* Change background color on hover */
+.navbar a:hover {
+    background-color: rgba(247, 161, 115, 0.636);
+}
+
+/* Style the fixed navbar when scrolled */
+.navbar.fixed {
+    position: fixed;
+    /* Fix the navbar at the top */
+    top: 0;
+    /* Position at the top */
+    left: 0;
+    /* Position at the left */
+    width: 100%;
+    /* Set width to 100% */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    background: rgba(51, 51, 51, 0.9);
+    /* Set semi-transparent background */
+}
+
+.navbar.fixed a {
+    color: rgb(232, 126, 5);
+    /* Change link color */
+}
+
+/* Responsive layout: Adjust for screens up to 1000px and 700px */
+@media screen and (max-width: 1000px) {
+    .navbar {
+        max-width: 100%;
+        /* Set maximum width */
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        padding: 5px 8px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        max-width: 100%;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        font-weight: bolder;
+        padding: 5px 3px;
+        text-align: center;
+    }
+}
+
+/* Introduction Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space items evenly */
+    gap: 60px;
+    /* Add gap between items */
+    max-width: 80%;
+    /* Set maximum width */
+    margin: 40px auto 0;
+    /* Add margin and center horizontally */
+    flex-wrap: wrap;
+    /* Allow wrapping of items */
+}
+
+/* Style the image inside intro */
+.intro img {
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    /* Scale the image to cover the container */
+    box-shadow: 0 0 15px rgba(216, 92, 10, 0.974), 0 0 30px rgba(251, 124, 33, 0.96);
+    /* Add shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect to the image */
+.intro img:hover {
+    transform: scale(1.1) translateY(-3px);
+    /* Scale and move up */
+}
+
+/* Style the text inside intro */
+.intro .text {
+    flex: 1;
+    /* Allow the text to grow and take up available space */
+    font-size: 2rem;
+    color: #461a01;
+    line-height: 1.5;
+    /* Set line height */
+}
+
+/* Responsive design: Adjust for screens up to 900px */
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        /* Remove top margin */
+        gap: 15px;
+        /* Reduce gap */
+    }
+
+    .intro img {
+        width: 60%;
+        /* Increase image width */
+        margin-top: 0;
+        order: 2;
+        /* Image below Text */
+    }
+
+    .intro .text {
+        font-size: 1.5rem;
+        order: 1;
+        /* Text above image */
+        line-height: 1.2;
+    }
+}
+
+/* Expectation Section */
+.expectation {
+    width: 80%;
+    margin: 0 auto;
+    /* Center the container horizontally */
+    position: relative;
+    /* Allow child elements to be positioned relative to this container */
+    padding-top: 20px;
+}
+
+/* Style the expectation-title class */
+.expectation-title {
+    font-size: 50px;
+    color: #461a01;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the expectation-content class */
+.expectation-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Set semi-transparent background */
+    padding: 30px 60px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Style the expectation-item class */
+.expectation-item {
+    font-size: 30px;
+    color: #461a01;
+    list-style: none;
+    /* Remove default list styling */
+}
+
+/* Style the list items inside expectation-item */
+.expectation-item li {
+    margin: 10px 0;
+}
+
+/* Style the Checkmark icon before list items */
+.expectation-item li::before {
+    font-family: "Font Awesome 5 Free";
+    /* Use Font Awesome for icons */
+    content: "\f00c";
+    /* Font Awesome 5 checkmark */
+    font-weight: 900;
+    /* Set font weight, thicker than bold */
+    color: rgb(184, 62, 13);
+    /* Set icon color */
+    margin-right: 10px;
+    /* Add margin between checkmark and text */
+}
+
+/* Style the favorite-icon class */
+.favorite-icon {
+    position: absolute;
+    bottom: 10px;
+    /* 10px from the bottom of the content box */
+    right: 10px;
+    /* 10px from the right of the content box */
+    font-size: 40px;
+    color: #ffcc00;
+    cursor: pointer;
+    /* Show hand cursor on hover */
+    transition: color 0.3s ease-in-out;
+}
+
+.favorite-icon:hover {
+    color: #ff9900;
+    /* Darker color on hover */
+}
+
+/* Style the solid star when favorited */
+.favorite-icon.active i {
+    font-weight: 900;
+    /* Solid star */
+}
+
+/* Responsive layout: Adjust for screens up to 768px */
+@media (max-width: 768px) {
+    .expectation-item {
+        font-size: 1.5rem;
+    }
+
+    .expectation-title {
+        font-size: 2rem;
+    }
+}
+
+/* Ingredients Part */
+.ingredient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* Style the ingredient heading */
+.inghead {
+    font-size: 50px;
+    margin-bottom: 20px;
+    /* Spacing between heading and image */
+    color: #461a01;
+    position: relative;
+    display: inline-block;
+    /* Keep the width of the content */
+    transition: transform 0.3s ease-in-out;
+}
+
+.inghead:hover {
+    transform: scale(1.1) translateY(-3px);
+    /* Enlarge and move up by 10px */
+}
+
+/* Style the decorative line before and after the heading */
+.inghead::before,
+.inghead::after {
+    content: '';
+    /* Empty content */
+    position: absolute;
+    top: 50%;
+    /* Vertically center */
+    /* Width and Height of the decorative line */
+    width: 190px;
+    height: 5px;
+    background-color: #461a01;
+}
+
+/* Position the line before and after the heading */
+.inghead::before {
+    left: -200px;
+    /* Left side of the heading */
+}
+
+.inghead::after {
+    right: -200px;
+    /* Right side of the heading */
+}
+
+/* Style the ingredient image */
+.ingimg {
+    width: 65%;
+    height: auto;
+    /* Keep image proportional */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect to the image */
+.ingimg:hover {
+    transform: scale(1.1) translateY(-3px);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .inghead {
+        font-size: 2.3rem;
+    }
+
+    .inghead::before,
+    .inghead::after {
+        width: 80px;
+        /* Shorter decorative lines */
+    }
+
+    .inghead::before {
+        left: -90px;
+        /* Adjust position */
+    }
+
+    .inghead::after {
+        right: -90px;
+    }
+
+    .ingimg {
+        max-width: 90%;
+        /* Increase image width */
+    }
+
+    .ingimg:hover {
+        transform: scale(1.02) translateY(-3px);
+        /* Reduce hover effect */
+    }
+}
+
+/* Responsive design for very small screens (e.g., portrait mobile) */
+@media (max-width: 500px) {
+    .inghead {
+        font-size: 2rem;
+    }
+
+    .inghead:hover {
+        transform: none;
+        /* Disable hover effect */
+    }
+
+    .ingimg {
+        max-width: 85%;
+        /* Adjust image width */
+    }
+
+    .ingimg:hover {
+        transform: none;
+        /* Disable hover effect */
+    }
+}
+
+/* Step-by-Step Part */
+.step {
+    width: 80%;
+    margin: 0 auto 40px;
+    /* Center and add margin at the bottom */
+    position: relative;
+    overflow: visible;
+    /* Allow content to overflow */
+    display: flex;
+    flex-direction: column;
+    /* Vertical layout */
+    justify-content: center;
+    /* Center-align items vertically */
+    text-align: center;
+    height: auto;
+}
+
+/* Style the step heading */
+.stephead {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: #461a01;
+    position: relative;
+    display: inline-block;
+    /* Keep the width of the content */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect to the step heading */
+.stephead:hover {
+    transform: scale(1.1) translateY(-3px);
+}
+
+/* Style the card page */
+.cardpage {
+    box-shadow: 0 4px 10px rgba(250, 105, 2, 0.399);
+    /* Add border */
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Style the tab section */
+.tab-section {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+}
+
+/* Style the tab container */
+.tab-container {
+    display: flex;
+    justify-content: flex-start;
+    /* Align items to the start */
+    background-color: #cccccc00;
+    position: relative;
+    border-bottom: none;
+    /* Remove bottom border */
+}
+
+/* Style the tabs */
+.tab {
+    text-decoration: none;
+    /* Remove underline */
+    color: #333;
+    font-size: 30px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    /* Add border */
+    box-shadow: -2px -2px 2px rgba(250, 105, 2, 0.399);
+    /* Add shadow */
+    border-bottom: none;
+    /* Remove bottom border */
+    border-radius: 10px 10px 0 0;
+    /* Add rounded corners */
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    /* Show pointer cursor */
+}
+
+/* Style the active tab */
+.tab.active {
+    z-index: 100;
+    /* Ensure it is above other elements */
+    background-color: inherit;
+    /* Inherit background color */
+    border-bottom: none;
+    /* Remove bottom border */
+    transform: translateY(-10px) scaleY(1.5);
+    /* Move up and increase height */
+}
+
+/* Style the page content */
+.page {
+    display: none;
+    /* Hide by default */
+    padding-left: 40px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    /* Add rounded corners */
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    border-top: none;
+    /* Remove border between active tab and page */
+}
+
+/* Show the active page */
+.page.active {
+    display: block;
+}
+
+/* Style the content section */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Add gap between items */
+}
+
+/* Style the text section */
+.text {
+    flex: 1;
+    /* Allow text to grow */
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+/* Style the image section */
+.image {
+    flex: 1;
+    /* Allow image to grow */
+}
+
+/* Style the image inside the image section */
+.image img {
+    max-width: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect to the image */
+.image img:hover {
+    transform: scale(1.1) translateY(-3px);
+}
+
+/* Colors for each tab and page */
+.tab[data-page="page1"],
+#page1 {
+    background-color: #ffccccfe;
+}
+
+.tab[data-page="page2"],
+#page2 {
+    background-color: #bce8d9;
+}
+
+.tab[data-page="page3"],
+#page3 {
+    background-color: #e6ffccf4;
+}
+
+.tab[data-page="page4"],
+#page4 {
+    background-color: #fcccffeb;
+}
+
+.tab[data-page="page5"],
+#page5 {
+    background-color: #ffe7ccfb;
+}
+
+.tab[data-page="page6"],
+#page6 {
+    background-color: #ccd8ff;
+}
+
+/* Responsive design for screens up to 1024px */
+@media (max-width: 1024px) {
+    .stephead {
+        font-size: 40px;
+    }
+
+    .tab {
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+    .content {
+        gap: 10px;
+        /* Reduce gap */
+    }
+
+    .text {
+        font-size: 24px;
+    }
+}
+
+/* Responsive design for screens up to 768px */
+@media (max-width: 768px) {
+    .step {
+        width: 90%;
+    }
+
+    .stephead {
+        font-size: 40px;
+    }
+
+    .tab {
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+    .content {
+        gap: 10px;
+        /* Reduce gap */
+    }
+
+    .text {
+        font-size: 24px;
+    }
+}
+
+/* Responsive design for screens up to 600px */
+@media (max-width: 600px) {
+    .stephead {
+        font-size: 2rem;
+    }
+
+    .tab {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        gap: 3px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .image img {
+        max-width: 95%;
+        /* Adjust image width */
+    }
+
+    .stephead:hover {
+        transform: none;
+        /* Disable hover effect */
+    }
+}
+
+/* Teaching Video Part */
+.video-section {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center-align items horizontally */
+    justify-content: center;
+    /* Center-align items vertically */
+    margin: 10px auto 40px;
+    /* Add margin and center horizontally */
+    height: auto;
+    /* Allow height to adjust automatically */
+}
+
+/* Style the video section heading */
+.video-section h2 {
+    font-size: 50px;
+    color: #461a01;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Spacing between heading and video */
+    position: relative;
+    display: inline-block;
+    /* Keep the width of the content */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect to the video section heading */
+.video-section h2:hover {
+    transform: scale(1.1) translateY(-3px);
+}
+
+/* Style the line before and after the video section heading */
+.video-section h2::before,
+.video-section h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 190px;
+    /* Width of the decorative line */
+    height: 5px;
+    /* Height of the decorative line */
+    background-color: #461a01;
+}
+
+/* Position the line before and after the video section heading */
+.video-section h2::before {
+    left: -200px;
+}
+
+.video-section h2::after {
+    right: -200px;
+}
+
+/* Style the video container */
+.video-container {
+    position: relative;
+    /* Set position to relative */
+    width: 80%;
+    max-width: 800px;
+    /* Set maximum width */
+    padding-bottom: 40px;
+    /* Add padding at the bottom */
+}
+
+/* Style the video element */
+video {
+    /* Set width and height to 100% */
+    width: 100%;
+    height: 100%;
+    border: 2px solid #802b01;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(216, 92, 10, 0.974), 0 0 30px rgba(251, 124, 33, 0.96);
+}
+
+/* Responsive design for screens up to 1024px */
+@media (max-width: 1024px) {
+    .video-section h2 {
+        font-size: 40px;
+    }
+
+    .video-section h2::before,
+    .video-section h2::after {
+        width: 120px;
+    }
+
+    .video-section h2::before {
+        left: -130px;
+    }
+
+    .video-section h2::after {
+        right: -130px;
+    }
+
+    .video-container {
+        width: 85%;
+    }
+}
+
+/* Responsive design for screens up to 768px */
+@media (max-width: 768px) {
+    .video-section h2 {
+        font-size: 30px;
+    }
+
+    .video-section h2::before,
+    .video-section h2::after {
+        width: 80px;
+    }
+
+    .video-section h2::before {
+        left: -90px;
+    }
+
+    .video-section h2::after {
+        right: -90px;
+    }
+
+    .video-container {
+        width: 80%;
+    }
+}
+
+/* Responsive design for screens up to 480px */
+@media (max-width: 480px) {
+    .video-section h2 {
+        font-size: 24px;
+    }
+
+    .video-section h2::before,
+    .video-section h2::after {
+        display: none;
+        /* Hide decorative lines */
+    }
+
+    .video-container {
+        width: 95%;
+    }
+
+    .video-section h2:hover {
+        transform: none;
+        /* Disable hover effect */
+    }
+}
+
+@media (max-width: 450px) {
+    .expectation-title {
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+
+    .expectation-item {
+        font-size: 1.1em;
+    }
+
+    .inghead {
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+
+    .stephead {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        margin-bottom: 0;
+    }
+
+    .video-section {
+        margin-top: -20px;
+    }
+
+    .video-section h2 {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+
+    .video-container {
+        width: 85%;
+    }
+
+    .tab {
+        font-size: 1rem;
+        padding: 3px 5px;
+    }
+}

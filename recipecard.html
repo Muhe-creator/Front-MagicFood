@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Defines the document language as English -->
+
+<head>
+    <!-- Define the character encoding for the document (UTF-8 supports most characters) -->
+    <meta charset="UTF-8">
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage -->
+    <title>Recipe Page</title>
+    <!-- Link to the custom CSS file for the styling -->
+    <link rel="stylesheet" href="recipecard.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <!-- Google Font: Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
+    <!-- Import Font Awesome icon library for using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section: Contains the top navigation elements -->
+    <header class="header">
+        <!-- Hamburger Menu: Toggles the navigation menu on smaller screens -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <!-- Font Awesome bars icon for the hamburger menu -->
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Social Media Icons: Links to social media platforms -->
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-weixin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Logo: Links back to the homepage with the website logo -->
+        <a href="home.html" class="logo">
+            <img src="logo2.png" alt="Logo for MagicFood">
+        </a>
+
+        <!-- Search Bar: Allows users to search the website -->
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <!-- Search button with a magnifying glass icon -->
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Login and Sign Up Buttons: Links to the login and registration pages -->
+        <a href="index.html" class="buttons">
+            <button class="btn">Log In</button>
+            <button class="btn btn-primary">Sign Up</button>
+        </a>
+    </header>
+
+    <!-- Navigation Menu: Contains links to different sections of the website -->
+    <nav class="nav-menu">
+        <!-- Home page link -->
+        <a href="home.html">Home</a>
+        <!-- Cook page link -->
+        <a href="cook.html">Cook</a>
+        <a href="#">Eat Outside</a>
+        <a href="#">Discover</a>
+        <a href="#">Q&A</a>
+        <!-- About Us section link -->
+        <a href="home.html#about">About Us</a>
+        <!-- Contact Us section link -->
+        <a href="home.html#contact">Contact Us</a>
+    </nav>
+
+    <!-- Top Banner Section: Displays a banner with an image and text -->
+    <!-- Top Banner: Displays Dish Name and a Tagline related to the recipe -->
+    <div class="center">
+        <div class="top-banner">
+            <img src="butterhead.png" alt="Butterhead lettuce">
+            <h2 class="bottom-text">Dobby's SUPER delicious recipe!<br>No alcohol, even kids can drink!</h2>
+        </div>
+    </div>
+
+    <!-- Placeholder for the fixed navigation bar -->
+    <div class="navbar-placeholder" id="navbar-placeholder"></div>
+
+    <!-- Fixed Navigation Bar: Stays at the top of the page for easy navigation -->
+    <div class="navbar" id="navbar">
+        <!-- Navigation Links: Links to corresponding sections of the page -->
+        <a href="#intro">Introduction</a>
+        <a href="#expectation">Expectation</a>
+        <a href="#ingredient">Ingredients</a>
+        <a href="#step">Step by Step</a>
+        <a href="#video">Teaching Video</a>
+    </div>
+
+    <!-- Introduction Section: Provides an overview of the recipe with Image and Text-->
+    <section id="intro" class="intro">
+        <img src="butterbeer.jpg" alt="Butterbeer">
+        <div class="text">
+            <h1>Introduction</h1>
+            <p>
+                The STAR beverage of the wizarding world! Perfect for both hot and cold! <br><br>
+                This warm and sweet magical drink is always infused with a rich caramel aroma and a hint of creamy
+                smoothness. <br>
+                It brings you a heartwarming sweetness and joy no matter where you are!
+            </p>
+        </div>
+    </section>
+
+    <!-- Expectation Section: Provides details about the recipe's flavor, time, and difficulty -->
+    <section id="expectation" class="expectation">
+        <h1 class="expectation-title">Expectation</h1>
+        <div class="expectation-content">
+            <div class="expectation-item">
+                <li>Expected Flavor: Sweet and Smooth</li>
+                <li>Estimated Cooking Time: 10min</li>
+                <li>Difficulty: ★★</li>
+            </div>
+        </div>
+        <!-- Favorite Icon: Allows users to mark the recipe as a favorite.
+          And view it from their personal account.-->
+        <div class="favorite-icon" onclick="toggleFavorite()">
+            <!-- Hollow star icon -->
+            <i class="far fa-star"></i>
+        </div>
+    </section>
+
+    <!-- Ingredients Section: Display the ingredients required for the recipe with Image and Text-->
+    <section id="ingredient" class="ingredient">
+        <h1 class="inghead">Ingredients</h1>
+        <img src="ingredient.png" alt="Ingredients" class="ingimg">
+    </section>
+
+    <!-- Step-by-Step Section: Provides detailed instructions for the recipe -->
+    <section id="step" class="step">
+        <h1 class="stephead">---- Step-by-Step ----</h1><br>
+        <!-- Tabs for each step: Allows users to switch between steps -->
+        <div class="tab-section">
+            <div class="tab-container">
+                <div class="tab active" data-page="page1"><b>STEP 1</b></div>
+                <div class="tab" data-page="page2"><b>STEP 2</b></div>
+                <div class="tab" data-page="page3"><b>STEP 3</b></div>
+                <div class="tab" data-page="page4"><b>STEP 4</b></div>
+                <div class="tab" data-page="page5"><b>STEP 5</b></div>
+                <div class="tab" data-page="page6"><b>STEP 6</b></div>
+            </div>
+        </div>
+
+        <!-- Step Content: Displays the details for each step with Image and Text-->
+        <div class="cardpage">
+            <!-- Step 1 -->
+            <div id="page1" class="page active">
+                <div class="content">
+                    <div class="text">
+                        <h3>Let's Start!</h3>
+                        <p>Combine brown sugar and water in small saucepan.</p>
+                        <p>Bring to gentle boil and cook, stirring often, until it reaches <b>240</b> degrees.</p>
+                    </div>
+                    <div class="image">
+                        <img src="step1.PNG" alt="Step 1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div id="page2" class="page">
+                <div class="content">
+                    <div class="text">
+                        <h3>Mix Ingredients!</h3>
+                        <p>Stir in butter, salt, vinegar and <strong>1/4</strong> cup of heavy cream.</p>
+                        <p>Let cool to room temperature and stir in rum extract.</p>
+                    </div>
+                    <div class="image">
+                        <img src="step2.PNG" alt="Step 2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div id="page3" class="page">
+                <div class="content">
+                    <div class="text">
+                        <h3>Keep Mixing and Stirring!</h3>
+                        <p>Combine <b>2</b> tbsp of brown sugar mixture with <b>1/2</b> cup of heavy cream.</p>
+                        <p>Beat with electric mixer for <b>2</b> or <b>3</b> minutes, until thickened but not
+                            completely
+                            whipped.</p>
+                    </div>
+                    <div class="image">
+                        <img src="step3.PNG" alt="Step 3">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div id="page4" class="page">
+                <div class="content">
+                    <div class="text">
+                        <h3>Divide into Cups!</h3>
+                        <p>To serve, divide remaining brown sugar mixture between <b>4</b> tall glasses.</p>
+                    </div>
+                    <div class="image">
+                        <img src="step4.PNG" alt="Step 4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div id="page5" class="page">
+                <div class="content">
+                    <div class="text">
+                        <h3>Cream Soda makes a Dazzling Entrance!</h3>
+                        <p>Add <b>1/4</b> cup cream soda to each glass, stirring to combine.</p>
+                    </div>
+                    <div class="image">
+                        <img src="step5.PNG" alt="Step 5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div id="page6" class="page">
+                <div class="content">
+                    <div class="text">
+                        <h3>Top Up and Enjoy!</h3>
+                        <p>Fill each glass nearly to the top with the additional soda.</p>
+                        <p>Spoon whipped topping over each.</p>
+                    </div>
+                    <div class="image">
+                        <img src="step6.PNG" alt="Step 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section: Displays a teaching video for the recipe -->
+    <section id="video" class="video-section">
+        <h2>Teaching Video</h2>
+        <!-- Video Container: Embeds a video for the recipe -->
+        <div class="video-container">
+            <video controls>
+                <source src="buttervideo.mp4" type="video/mp4">
+                <!-- Fallback message for unsupported browsers -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!--Use the semantic tag <footer>, 
+            which is specifically used to define the bottom content of the page. 
+            Improve code readability.-->
+        <div class="footer-container">
+            <!-- Link to the homepage with the website logo -->
+            <a href="home.html" class="footer-logo">
+                <img src="logo2.png" alt="Logo for MagicFood">
+            </a>
+            <!-- Footer Content Section -->
+            <div class="footer-content">
+                <!-- Different Social Media Icons -->
+                <!--Use the ICONS in the Font Awesome icon library.-->
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!--Different Footer Navigation Links -->
+                <nav class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Services</a>
+                    <a href="home.html">Home</a>
+                    <a href="home.html#about">About Us</a>
+                </nav>
+                <!-- Contact Information -->
+                <div class="footer-contact">
+                    Contact us at: <a href="mailto:info@magicfood.com">info@magicfood.com</a>
+                    <!-- Email Contact Link -->
+                </div>
+                <!-- Copyright Information -->
+                <div class="footer-copyright">
+                    &copy; 2025 MagicFood. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Wait for the DOM content to be fully loaded before executing the script
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the navbar element by its ID
+            var navbar = document.getElementById("navbar");
+            // Get the placeholder element by its ID
+            var placeholder = document.getElementById("navbar-placeholder");
+
+            // Calculate the initial height of the navbar
+            var navbarHeight = navbar.offsetHeight;
+            // Set the height of the placeholder to match the navbar's height
+            placeholder.style.height = navbarHeight + "px";
+
+            // Add a scroll event listener to the window
+            window.addEventListener("scroll", function () {
+                // Check if the page has been scrolled past the placeholder's top position
+                if (window.pageYOffset >= placeholder.offsetTop) {
+                    // Add the 'fixed' class to the navbar to make it stick to the top
+                    navbar.classList.add("fixed");
+                } else {
+                    // Remove the 'fixed' class to return the navbar to its original position
+                    navbar.classList.remove("fixed");
+                }
+            });
+        });
+
+        // Get all elements with the class 'tab'
+        const tabs = document.querySelectorAll('.tab');
+        // Get all elements with the class 'page'
+        const pages = document.querySelectorAll('.page');
+
+        // Loop through each tab element
+        tabs.forEach(tab => {
+            // Add a click event listener to each tab
+            tab.addEventListener('click', (e) => {
+                // Prevent the default behavior of the link (e.g., navigating to a new page)
+                e.preventDefault();
+
+                // Remove the 'active' class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Remove the 'active' class from all pages
+                pages.forEach(p => p.classList.remove('active'));
+
+                // Add the 'active' class to the clicked tab
+                tab.classList.add('active');
+                // Add the 'active' class to the page associated with the clicked tab
+                document.getElementById(tab.dataset.page).classList.add('active');
+            });
+        });
+
+        // Favorite Functionality
+        function toggleFavorite() {
+            // Get the favorite icon element
+            const favoriteIcon = document.querySelector('.favorite-icon');
+            // Toggle the 'active' class on the favorite icon to change its state
+            favoriteIcon.classList.toggle('active');
+            // Check if the favorite icon is in the 'active' state
+            if (favoriteIcon.classList.contains('active')) {
+                // Show an alert indicating the item has been favorited
+                alert('Favorited!');
+            } else {
+                // Show an alert indicating the item has been removed from favorites
+                alert('Removed from favorites!');
+            }
+        }
+    </script>
+    <script src="nav.js">
+        //Links to JavaScript files in the navigation bar</script>
+</body>
+
+</html>
