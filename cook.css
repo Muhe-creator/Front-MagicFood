@@ -582,7 +582,7 @@ body {
     }
     
     .view-more {
-        display: none;
+        visibility: hidden;
     }
 
     .recipe::after {
