@@ -582,8 +582,7 @@ body {
     }
     
     .view-more {
-        display:flex;
-        flexwrap: wrap;
+        display: none;
     }
 
     .recipe::after {
