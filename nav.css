@@ -334,10 +334,20 @@
         font-size: 0.8rem;
     }
 
-    .social-media {
-        display: none;
+}
+
+@media (max-width: 395px) {
+    .logo img {
+        max-width: 80px;
+        max-height: 30px;
+        margin-left: 10px;
+        margin-top: 10px;
     }
 
+    .buttons .btn,
+    .buttons .btn-primary {
+        font-size: 0.5rem;
+    }
 }
 
 /* Footer Section */
