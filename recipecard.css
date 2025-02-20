@@ -129,6 +129,17 @@ body {
     }
 }
 
+@media (max-width: 395px) {
+    .bottom-text {
+        font-size: 1rem;
+        padding: 0;
+        bottom: 20px;
+        /* Adjust position from the bottom */
+        position: relative;
+        width: 100%;
+        margin-bottom: 0;
+}
+
 
 /* Style the fixed navigation bar */
 .navbar {
@@ -484,7 +495,7 @@ body {
     }
 
     .ingimg {
-        max-width: 85%;
+        width: 85%;
         /* Adjust image width */
     }
 
