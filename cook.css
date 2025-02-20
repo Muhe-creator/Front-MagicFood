@@ -585,6 +585,10 @@ body {
         visibility: hidden;
     }
 
+    .view-more i {
+        visibility: visible;
+    }
+
     .recipe::after {
     font-size: 15px;
 }
