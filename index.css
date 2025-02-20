@@ -439,3 +439,13 @@ button:hover {
         border-radius: 20px;
     }
 }
+
+@media (max-width: 395px) {
+    .form-group input {
+        width: 80%;
+    }
+    .terms {
+        font-size: 0.3rem;
+    }
+
+}
