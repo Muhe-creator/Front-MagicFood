@@ -28,7 +28,7 @@ searchButton.addEventListener('click', () => {
     // Select the container element with the class 'search'
     const searchContainer = document.querySelector('.search');
     // Toggle the 'active' class on the search container to show/hide it
-    searchContainer.classList.toggle('active');
+    searchContainer.classList.toggle('none');
 });
 
 // Listen for window resize events
