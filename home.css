@@ -709,7 +709,7 @@ body {
     .welcome {
         height: auto;
         /* Allow height to adjust automatically */
-        padding: 40px auto;
+        padding: 40px 0;
         text-align: center;
         align-items: center;
         justify-content: center;
