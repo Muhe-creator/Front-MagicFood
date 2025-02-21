@@ -335,6 +335,7 @@ body {
 /* Style the list items inside expectation-item */
 .expectation-item li {
     margin: 10px 0;
+    list-style: none;
 }
 
 /* Style the Checkmark icon before list items */
